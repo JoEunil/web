@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liverpoool FC</title>
+    <script src="./slide.js"> </script>
+
+    <style>
+        header.top{
+            background-color: rgb(207, 31, 31);
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        h1{
+            display:inline;
+            text-align: left;
+            font-style:normal;
+            font-size: 70px;
+            color: white;
+        }
+        ul.bar{
+            display:inline;            
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(207, 31, 31);
+            font-size:50px;
+            margin-left:100px;
+        }
+        ul.bar li{
+            display:inline;
+        }
+        ul.bar li a{
+            display:inline;
+            list-style-type:none;
+            font-size:40px;
+        }
+        li>a{
+            display: inline-block;
+            margin: 10px;
+            color: white;
+            text-decoration:none;
+        }
+        table.information{
+            font-size: 30px;
+            border:1;
+            
+        }
+        td.red{
+            background-color: rgb(207, 31, 31);
+            color: white;
+            font:bold;
+        }
+        img.logo{
+            margin-left: 100px
+        }
+        #player th, #schedule th,#league th{
+            text-align: center;
+            background-color: rgb(184, 184, 184);
+        }
+        #schedule td, #league td{
+            text-align: center;
+            
+        }
+        #liverpool td{
+            background-color: yellow;
+        }
+        header a{
+            font:bold;
+            font-size:20px;
+        }
+        #player td:first-child{
+            background-color:rgb(207, 31, 31);
+            font: bold;
+            color: white;
+            text-align:center;
+        }
+        #slider {
+            display:block; 
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            margin-top: 5px;
+            width: 900px;
+            height: 600px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+        #slider ul {
+           position: relative;
+            list-style: none;
+            height: 100%;
+            width: 10000%;
+            padding: 0;
+            margin: 0;
+            transition: all 750ms ease;
+            left: 0;
+        }
+        #slider ul li {
+            position: relative;
+            height: 100%;
+            float: left;
+        }
+        #slider ul li img{
+            width:900px;
+            height:600px;
+        }
+        #slider #prev, #slider #next {
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            top: 50%;
+            border-radius: 50%;
+            font-size: 2rem;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+            transform: translateY(-50%);
+            transition: all 150ms ease;
+        }
+        #slider #prev {
+            left: 10px;
+        }
+        #slider #next {
+            right: 10px;
+        }
+
+        #slider #prev:hover, #slider #next:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            text-shadow: 0;
+        }
+        #return{
+            position:fixed;
+            float:right;
+            left:90%;
+            top:90%;
+            background-color: black;
+            border-radius: 100%;
+            width:50px;
+            height:50px;
+        }
+        #return a{
+            display:block;
+            margin-left: 3px;
+            margin-top: 10px;
+            color:white;
+            font: bold;
+            font-size:20px;
+            text-decoration: none;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div  id="return" >
+        <a href="#top">TOP</a>
+    </div>
+    <header class="top">
+        <h1>LFC</h1>
+            <ul class="bar">
+                <li>
+                    <a href="#intro">구단소개</a>
+                </li>
+                <li>
+                    <a href="#player">선수단</a>
+                </li>
+                <li>
+                    <a href="#schedule">경기일정</a>
+                </li>
+                <li>
+                    <a href="#table">순위</a>
+                </li>
+            </ul> 
+    </header>
+    <section>
+        <div id="slider">
+            <ul id="slideWrap"> 
+                <li><img src="1.jpg" alt=""></li>
+                <li><img src="2.jpg" alt=""></li>
+                <li><img src="3.jpg" alt=""></li>
+                <li><img src="4.jpg" alt=""></li>
+                <li><img src="5.jpg" alt=""></li> 
+            </ul> 
+            <a id="prev" href="#">&#8810;</a>
+            <a id="next" href="#">&#8811;</a> 
+        </div>
+        <hr/>
+        <article>
+            <header>
+                <a name="intro">구단 소개</a>
+            </header>
+            <table class="infromation">
+                <tr>
+                    <td colspan="2">
+                         <img class="logo" src="logo.svg" width="250px" height="250px" title="logo">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="red">정식 명칭</td>
+                    <td>Liverpool Football Club</td>
+                </tr>
+                <tr>
+                    <td class="red">약칭</td>
+                    <td>LIV</td>
+                </tr>
+                <tr>
+                    <td class="red">창단</td>
+                    <td>1892년 6월 3일</td>
+                </tr>
+                <tr>
+                    <td class="red">소속리그</td>
+                    <td>프리미어리그</td>
+                </tr>
+                <tr>
+                    <td class="red">연고지</td>
+                    <td>영국 머지사이드 주 리버풀</td>
+                </tr>
+                <tr>
+                    <td class="red">홈구장</td>
+                    <td>안필드</td>
+                </tr>
+                <tr>
+                    <td class="red">구단주</td>
+                    <td>펜웨이 스포츠 그룹</td>
+                </tr>
+                <tr>
+                    <td class="red">감독</td>
+                    <td>위르겐 클롭</td>
+                </tr>
+                <tr>
+                    <td class="red">주장</td>
+                    <td>조던 헨더슨</td>
+                </tr>                
+            </table>
+        </article>
+        <hr/>
+        <article>
+            <header>
+                <a name="player">선수단</a>
+            </header>
+            <table id="player">
+                <tr>
+                    <th>등번호</th>
+                    <th>이름</th>
+                    <th>국적</th>
+                    <th>포지션</th>
+                    <th>생년월일</th>
+                </tr>
+                <tr>
+                    <td style="background-color:rgb(120, 255, 47)">1</td>
+                    <td>알리송 베케르</td>
+                    <td><img src="./brazil.svg" width:="20px" height="20px"></td>
+                    <td>GK</td>
+                    <td>1992.10.02</td>
+                </tr>
+                <tr>
+                    
+                    <td>3</td>
+                    <td>파비뉴</td>
+                    <td><img src="./brazil.svg" width:="20px" height="20px"></td>
+                    <td>MF</td>
+                    <td>1993.10.23</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>버질 판데이크</td>
+                    <td><img src="./netherland.svg" width:="20px" height="20px"></td>
+                    <td>DF</td>
+                    <td>1991.07.08</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>이브라히마 코나테</td>
+                    <td><img src="./france.svg" width:="20px" height="20px"></td>
+                    <td>DF</td>
+                    <td>1999.05.25</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>티아고 알칸타라</td>
+                    <td><img src="./spain.svg" width:="20px" height="20px"></td>
+                    <td>MF</td>
+                    <td>1991.04.11</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>제임스 밀너</td>
+                    <td><img src="./england.svg" width:="20px" height="20px"></td>
+                    <td>MF</td>
+                    <td>1986.01.04</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>나비 케이타</td>
+                    <td><img src="./gini.svg" width:="20px" height="20px"></td>
+                    <td>MF</td>
+                    <td>1995.02.10</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>호베르투 피르미누</td>
+                    <td><img src="./brazil.svg" width:="20px" height="20px"></td>
+                    <td>FW</td>
+                    <td>1991.10.02</td>
+                </tr>
+                
+                <tr>
+                    <td>10</td>
+                    <td>사디오 마네</td>
+                    <td><img src="./senegal.svg" width:="20px" height="20px"></td>
+                    <td>FW</td>
+                    <td>1992.04.10</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>모하메드 살라</td>
+                    <td><img src="./egypt.svg" width:="20px" height="20px"></td>
+                    <td>FW</td>
+                    <td>1992.06.15</td>
+                </tr>
+            </table>
+        </article>
+        <hr/>
+        <article>
+            <header>
+                <a name="schedule">경기일정</a>
+            </header>
+            <table id="schedule" style="width:40%">
+                <tr>
+                    <th>날짜</th>
+                    <th>시간</th>
+                    <th>상대</th>
+                    <th>홈/어웨이</th>
+                    <th>대회</th>
+                </tr>
+                <tr>
+                    <td>05.04(수)</td>
+                    <td>04:00</td>
+                    <td>비야레알</td>
+                    <td>A</td>
+                    <td>UEFA 챔피언스리그</td>
+                </tr>
+                <tr>
+                    <td>05.08(일)</td>
+                    <td>03:45</td>
+                    <td>토트넘</td>
+                    <td>H</td>
+                    <td>프리미어리그</td>
+                </tr>
+                <tr>
+                    <td>05.11(수)</td>
+                    <td>04:00</td>
+                    <td>아스톤빌라</td>
+                    <td>A</td>
+                    <td>프리미어리그</td>
+                </tr>
+                <tr>
+                    <td>05.15(일)</td>
+                    <td>00:45</td>
+                    <td>첼시</td>
+                    <td>중립</td>
+                    <td>잉글랜드 FA컵</td>
+                </tr>
+                <tr>
+                    <td>05.18(수)</td>
+                    <td>03:45</td>
+                    <td>사우스햄튼</td>
+                    <td>A</td>
+                    <td>프리미어리그</td>
+                </tr>
+                <tr>
+                    <td>05.23(월)</td>
+                    <td>00:00</td>
+                    <td>울버햄튼</td>
+                    <td>H</td>
+                    <td>프리미어리그</td>
+                </tr>
+            </table>
+        </article>
+        <hr/>
+        <article>
+            <header>
+                <a name="table">순위</a>
+            </header>
+            <table  id="league" style="width:40%">
+                <tr>
+                    <th>순위</th>
+                    <th>팀</th>
+                    <th>경기수</th>
+                    <th>승점</th>
+                    <th>승</th>
+                    <th>무</th>
+                    <th>패</th>
+                    <th>득점</th>
+                    <th>실점</th>
+                    <th>득실차</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>맨체스터 시티</td>
+                    <td>34</td>
+                    <td>83</td>
+                    <td>26</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>84</td>
+                    <td>21</td>
+                    <td>63</td>
+                </tr>
+                <tr id="liverpool">
+                    <td>2</td>
+                    <td>리버풀</td>
+                    <td>34</td>
+                    <td>82</td>
+                    <td>25</td>
+                    <td>7</td>
+                    <td>2</td>
+                    <td>86</td>
+                    <td>21</td>
+                    <td>63</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>첼시</td>
+                    <td>34</td>
+                    <td>66</td>
+                    <td>19</td>
+                    <td>9</td>
+                    <td>5</td>
+                    <td>68</td>
+                    <td>28</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>아스날</td>
+                    <td>33</td>
+                    <td>60</td>
+                    <td>19</td>
+                    <td>3</td>
+                    <td>11</td>
+                    <td>52</td>
+                    <td>40</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>토트넘</td>
+                    <td>33</td>
+                    <td>58</td>
+                    <td>18</td>
+                    <td>4</td>
+                    <td>11</td>
+                    <td>56</td>
+                    <td>38</td>
+                    <td>18</td>
+                </tr>
+            </table>
+        </article>
+        <hr/>
+        <article>
+            <img src="title.png" title="title" style="display:block; margin-left: auto; margin-right: auto;">
+        </article>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
